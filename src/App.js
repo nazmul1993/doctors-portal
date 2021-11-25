@@ -9,10 +9,12 @@ import {
 } from "react-router-dom";
 import Home from './Pages/Home/Home/Home';
 import Appointment from './Pages/Appointment/Appointment/Appointment';
+import Dashboard from './Pages/Dashboard/Dashboard/Dashboard';
 import Login from './Pages/Login/Login/Login';
 import Register from './Pages/Login/Register/Register';
 import Authprovider from './contexts/AuthProvider/Authprovider';
 import PrivateRoute from './Pages/Login/PrivateRoute/PrivateRoute';
+//import Dashboard from './Pages/Dashboard/Dashboard/Dashboard';
 
 function App() {
   return (
@@ -22,7 +24,10 @@ function App() {
       <Switch>
           <PrivateRoute path="/appointment">
             <Appointment/>
-          </PrivateRoute>
+            </PrivateRoute>
+          <PrivateRoute path="/dashboard">
+            <Dashboard/>
+            </PrivateRoute>
           <Route path="/home">
             <Home />
           </Route>
